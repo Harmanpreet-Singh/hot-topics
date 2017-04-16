@@ -1,0 +1,364 @@
+/*
+
+Analogous Color Scheme:
+
+https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=1,0.7253377321029618,0.2880466574263991,0.91,0.5745113473760209,0.2621224582580232,1,0.5606876515324759,0.33804665742639917,0.91,0.3855470643676006,0.2621224582580232,1,0.3198515635863862,0.2880466574263991&swatchOrder=0,1,2,3,4
+
+*/
+
+@import url(../font-awesome/css/font-awesome.min.css);
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+
+/*-- MOBILE DEVICE - Content needs to be displayed in 1 column --*/
+* {
+    box-sizing: border-box;
+}	
+
+body {	
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    margin:0;
+    padding:0;
+    font-size:  1.0rem;
+    line-height: 1.618;
+	background-color: #E86243;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Droid Serif", serif;
+}
+
+input {
+    width: 30%;
+    padding: 6px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    border: 1px solid gray;
+    /*border-radius: 7px;*/
+}
+
+figure {
+    margin: 0;
+    float: left;
+    padding-right: 2%;
+    height: auto; 
+    width: 40%;  
+}
+
+figure img {
+        /*display: block;*/
+    width: 100%;    
+    height: auto;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+.box {
+    /*clear: both;*/
+    padding-top: 1%;
+}
+
+
+.box:first-child {
+    clear: both;
+    width: 100%;
+}
+
+.box:not(:first-child) {
+    float: left;
+    width: 50%;
+}
+
+.container {
+    background-color: #FFF;
+    color: #E86243;
+    padding: 1rem;
+    /*display: inline-block;*/
+}
+
+footer {
+    clear: both;
+}
+
+li {
+  list-style: none;
+}
+
+/* Add this class to any HTML element that needs clearing float */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*-- .content-box styles entire content --*/
+.content-box {
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.wrapper {
+    max-width: 100rem;
+    margin: 1rem;
+}
+
+.logo {
+    color: #FFF;
+}
+
+.masthead-bg {
+    background-color: #E89343;
+    background-image: URL( ../img/masthead-bg.jpg);
+    background-size: cover;
+    color: #FFF;
+}
+
+.masthead-bg h1 {
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.nav-bg .content-box {
+    margin: 0;
+}
+
+
+
+
+.main-content-bg .content-box {
+    margin: 1rem;
+    /*
+    border: 1px solid red; */
+}
+
+.main-content-bg .content-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*
+    border: 1px solid blue; */
+}
+
+.main-content-bg .content-box ul li {
+    margin: 0 0 1rem 0;
+}
+
+.main-content-bg .content-box ul img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption ul li {
+    width: 100% !important;
+    text-transform: capitalize;
+}
+
+#f2 {
+    width: 30%;
+    display: inline;
+}
+
+#fc2 {
+    float: right;
+    text-align: left;
+}
+
+
+
+.main-content-bg h2 {
+    margin: 0 0 1rem 0;
+}
+
+
+
+/*-- NAVIGATION --*/
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    display: block;
+    background-color: #E89343;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0 1px 0;
+    float: left; 
+    width: 20%;
+}
+
+.navbar li:not(:last-child) a {
+    border-right: 2px solid #E86243;;
+}
+
+.navbar li a:hover {
+    background-color: #FFB949;
+}
+
+.navbar li:last-child a {
+    margin: 0;
+}
+
+
+/*-- Styling footer --*/
+.footer-bg {
+    background-color: #E89343;
+    color: white;
+    padding: 1rem 0;
+}
+
+.footer-bg p {
+    margin: 0;
+}
+
+
+/*Mobile View < 35rem*/
+
+@media screen and (max-width: 35rem) {
+
+body {
+    font-size:  0.618rem;
+    line-height: 1.618;
+}    
+
+input {
+    width: 100%;
+}
+
+.container {
+    background-color: #FFF;
+    color: #E86243;
+    padding: 1rem;
+}
+figure {
+    width: 100%;  height: auto;
+}
+figure img {
+        /*display: block;*/
+    width: 100%;    
+    height: auto;
+}
+
+.box, h1 {
+    text-align: center;
+}
+
+.box:not(:first-child) {
+    float: left;
+    width: 100%;
+}
+
+
+    .navbar li a {
+        width: 100%;
+    }
+    #f2 {
+        width: 100%;
+    }
+    #fc2 {
+        width: 100%;
+    }
+    .main-content-bg {
+        display: inline-block;
+    }
+}
+
+/* --  Break-Point at 35rem - TABLET VIEWPORT-- */
+@media screen and (min-width: 35rem) and (max-width: 80rem){
+
+input {
+    width: 45%;
+}
+
+.box, h1 {
+    text-align: center;
+}
+
+.box:not(:first-child) {
+    float: left;
+    width: 100%;
+}
+
+body {
+    font-size:  1.0rem;
+    line-height: 1.618;
+}    
+
+
+
+    .main-content-bg .content-box ul::after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    
+    .main-content-bg .content-box ul li {
+        width: calc(33.33% - 1rem + 0.33rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    /* Reference:
+       https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+    .main-content-bg .content-box ul li:nth-child(3n) {
+        margin: 0 0 1rem 0;
+    }
+    
+    #f2 {
+        width: 35%;
+    }
+    #fc2 {
+        width: 55%;
+    }
+}
+
+
+
+
+/* -- Second Break-Point at 80rem - DESKTOP VIEWPORT-- */
+@media screen and (min-width: 80rem) {
+    
+
+
+    .main-content-bg .content-box {
+        width: 75%;
+        /*margin: 0 auto*/
+    }
+
+    .content-box {
+        text-align: left !important;
+    }
+    
+    .main-content-bg .content-box ul:after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    .main-content-bg .content-box ul li {
+        width: calc(25% - 0.75rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    .main-content-bg .content-box ul li:nth-child(4n) {
+        margin: 0 0 1rem 0;
+    }
+
+    #f2 {
+        width: 30%;
+    }
+    #fc2 {
+        width: 60%;
+    }
+}
